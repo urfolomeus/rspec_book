@@ -21,6 +21,10 @@ When /^I guess (. . . .)$/ do |code|
   game.guess(code.split)
 end
 
+When /^I guess (. . . . .)$/ do |code|
+  game.guess(code.split)
+end
+
 When /^I start a new game$/ do
   game.start(%w[r g y c])
 end

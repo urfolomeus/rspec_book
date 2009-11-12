@@ -44,3 +44,9 @@ Feature: code-breaker submits guess
 		| r y g c | r y g g | bbb  |
 		| r y g c | r y c c | bbb  |
 		| r y g c | g y r g | bww  |
+		
+	Scenarios: more than 4 chars in guess
+		| code		| guess			| mark |
+		| r g y c | g r y g c | bww  |
+		| r g y c | r y g g c | bww  |
+		| r g y c | r y c c g | bbw  |

@@ -61,6 +61,14 @@ module Codebreaker
           end
         end
       end
+      
+      context "with 5 colors guessed" do
+        it "should only mark the first 4" do
+          @game.start(%w[r g y c])
+          @messenger.should_receive(:puts).with("bww")
+          @game.guess(%w[g r y g c])
+        end
+      end
     end
   end
 end
